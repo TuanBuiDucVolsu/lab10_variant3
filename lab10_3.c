@@ -14,23 +14,22 @@ int main(int argc, char *argv[]) {
     int i;
     printf("+Size = ");
     scanf("%d", &size);
-    // Cap phát mang các con tro cap 1
+  
     a = (int **)malloc(size * sizeof(int *));
     for (i = 0; i < size; i++)
     {
-        // Cap phát cho tung con tro cap 1
+        // Cap phÃ¡t cho tung con tro cap 1
         a[i] = (int *)malloc(size * sizeof(int));
     }
     InputArray(a, size);
     OutputArray(a, size);
     Function3(a,size);
     Function4(a,size);
-    // giai phóng tung hàng
+   
     for (i = 0; i < size; i++)
     {
         free(a[i]);
     }
-    // giai phong con tro quan lý các dòng
     free(a);
 	return 0;
 }
@@ -56,13 +55,13 @@ void OutputArray(int **a, int size)
 }
 void Function3(int **a,int size)
 {
-	int success=0; 
+    int success = 0; 
     int i,j;
-    for (i=0; i<size; i++)   
+    for (i = 0; i < size; i++)   
+    {
+    for (j = 0; j < size; j++) 
 	{
-    for (j=0; j<size; j++) 
-	{
-        if (i!=j) {
+        if (i != j) {
             if (a[i][j] == a[j][i]) {
                 success = 1;
             } else {
@@ -100,7 +99,7 @@ void Function4(int **a,int size)
         a[i][i] = a[i][ind];
         a[i][ind] = zamena;
     }
-    printf("\nzadanie4 Rezultat : \n") ;
+    printf("\nzadanie4 Rezultat : \n") ;      //Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ 4
     for (i = 0; i < size; i++)
     {
         printf("\n");
