@@ -68,12 +68,12 @@ int Function1(int **a,int row,int col)
     	for( i = 0; i < col; i++)
     	{
     		if(a[j][i] == 0)
-    		s++;                    //    
+    		s++;                      
 		}
 		if(s != 0)
 		count++;
 	}
-    printf("So cot chua phan tu 0 la : %d",count);  //    0
+    printf("So cot chua phan tu 0 la : %d",count);  //    Количество столбцов, содержащих хотя бы один нулевой элемент
     printf("\n");
     return count;
 }
@@ -100,7 +100,7 @@ int Function2(int **a,int row,int col)
                 numstr = i;
             }
         }
-        printf("\nDong la : %d",numstr);
+        printf("\nDong la : %d",numstr);  //Строка с самой длинной строкой
 }
 
 
